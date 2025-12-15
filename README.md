@@ -45,15 +45,14 @@ L'obiettivo principale è stato implementare un **sistema di registrazione, logi
 ```bash
 git clone https://github.com/<tuo-username>/SignUpLogInJWT.git
 ```
+2. Configura il database PostgreSQL (ad esempio con Supabase) e aggiorna application.properties o .env.
 
-# 2. Configura il database PostgreSQL (ad esempio con Supabase) e aggiorna application.properties o .env.
-
-# 3. Avvia il progetto:
+3. Avvia il progetto:
 
 ```bash
 ./gradlew bootRun
 ```
-# 4. Testa le API con Postman
+4. Testa le API con Postman
 
 Esegui richieste alle API per verificare il funzionamento dell'autenticazione e della gestione utenti:
 
