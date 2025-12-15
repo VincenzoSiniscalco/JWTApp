@@ -44,3 +44,5 @@ L'obiettivo principale è stato implementare un **sistema di registrazione, logi
 1. Clona il repository:  
 ```bash
 git clone https://github.com/<tuo-username>/SignUpLogInJWT.git
+'''
+2. Configura il database PostgreSQL (ad esempio con Supabase) e aggiorna application.properties o .env.
