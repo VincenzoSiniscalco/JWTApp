@@ -77,12 +77,12 @@ public class User implements UserDetails{
 
 	@Override
 	public @Nullable String getPassword() {
-		return username;
+		return password;
 	}
 
 	@Override
 	public String getUsername() {
-		return password;
+		return username;
 	}
 
 
