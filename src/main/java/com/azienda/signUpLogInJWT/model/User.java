@@ -36,7 +36,7 @@ public class User implements UserDetails{
 	@Column(nullable=false)
 	private String password;
 
-	private boolean enabled;
+	private boolean enabled=true;
 	
 	@Column(name="verification code")
 	private String verificationCode;

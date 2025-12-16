@@ -10,22 +10,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.azienda.signUpLogInJWT.model.User;
+import com.azienda.signUpLogInJWT.repository.UserRepository;
 import com.azienda.signUpLogInJWT.service.UserService;
 
 @RequestMapping("/users")
 @RestController
 public class UserController {
 	private final UserService userService;
+	private final UserRepository userRepository;
 	
-	public UserController(UserService userService) {
+	public UserController(UserService userService, UserRepository userRepository) {
 		this.userService=userService;
+		this.userRepository =userRepository;
 	}
 	
 	@GetMapping("/me")
 	public ResponseEntity<User> authenticatedUser(){
 		Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
-		User currentUser= (User) authentication.getPrincipal();
-		return ResponseEntity.ok(currentUser);
+		String email = authentication.getName();
+		return ResponseEntity.ok(userRepository.findByEmail(email).orElse(null));
 	}
 	
 	@GetMapping("/")

@@ -37,3 +37,9 @@ out/
 ### VS Code ###
 .vscode/
 /.apt_generated_tests/
+
+# Eclipse
+.metadata/
+*.snap
+*.log
+*.tmp
